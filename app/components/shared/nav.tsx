@@ -21,7 +21,12 @@ export function Navbar() {
               {name}
             </CustomLink>
           ))}
-          <CustomLink className='transition-all hover:text-secondary-dark dark:hover:text-secondary-light flex items-center relative' href={socialLinks.github}>Github</CustomLink>
+          <CustomLink
+            className='transition-all hover:text-secondary-dark dark:hover:text-secondary-light flex items-center relative'
+            href={socialLinks.github}
+          >
+            Github
+          </CustomLink>
 
           <div className='flex md:hidden'>
             <ThemeSwitch />
