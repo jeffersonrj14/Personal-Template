@@ -1,0 +1,214 @@
+---
+title: "Custom MDX"
+publishedAt: "2025-12-15"
+summary: "Custom MDX."
+tags: "Custom MDX"
+published: "true"
+lastUpdated: "2025-12-16"
+---
+
+## h2 Heading
+
+### h3 Heading
+
+#### h4 Heading
+
+##### h5 Heading
+
+## Emphasis
+
+**This is bold text**
+
+_This is italic text_
+
+<del> Strikethrough </del>
+
+## Blockquotes
+
+> Personal Template
+
+## Links
+
+- [Personal Template](https://github.com/jeffersonrj14/Personal-Template)
+
+## CodeBlocks
+
+```
+// This is commented-out code
+export default function HelloWorld() {
+  return (
+    <h1>Hello, World!</h1>
+  );
+}
+```
+
+## Dropdown
+
+<Details summary="Title">
+Content
+</Details>
+
+## Images
+
+uses [Next.js Image](https://nextjs.org/docs/basic-features/image-optimization) in MDX for seamless image rendering:
+
+```
+<Image
+  src="/Opengraph-Images.png"
+  alt="OpenGraph image"
+  width={640}
+  height={500}
+/>
+```
+
+Renders:
+
+<Image
+  src="/Opengraph-Images.png"
+  alt="OpenGraph image"
+  width={640}
+  height={500}
+/>
+
+## Image Grid
+
+```
+<ImageGrid
+  columns={3} // Accepts 2, 3, or 4 columns
+  images={[
+    { src: "/Opengraph-Images.png", alt: "Photo1", href: "#" }, // 'href' is optional
+    { src: "/Opengraph-Images.png", alt: "Photo2", href: "#" },
+    { src: "/Opengraph-Images.png", alt: "Photo3"},
+  ]}
+/>
+```
+
+Renders:
+
+<ImageGrid
+  columns={3}
+  images={[
+    { src: "/Opengraph-Images.png", alt: "Photo1", href: "#" },
+    { src: "/Opengraph-Images.png", alt: "Photo2", href: "#" },
+    { src: "/Opengraph-Images.png", alt: "Photo3" },
+  ]}
+/>
+
+## Embeds
+
+### Tweets
+
+uses [react-tweet](https://react-tweet.vercel.app/) to embed tweets in MDX posts.
+
+```
+<StaticTweet id="1987177773107163546" />
+```
+
+Renders:
+
+<StaticTweet id="1987177773107163546" />
+
+### YouTube Videos
+
+Uses [react-youtube](https://www.npmjs.com/package/react-youtube) to embed YouTube videos in MDX posts.
+
+```
+<YouTube videoId="mwJGZ8YU7o4" />
+```
+
+Renders:
+
+<YouTube videoId="mwJGZ8YU7o4" />
+
+### Captions
+
+uses [react-wrap-balancer](https://react-wrap-balancer.vercel.app/) to evenly balance captions in MDX posts.
+
+```
+<Caption>
+  Personal Template
+</Caption>
+```
+
+Renders:
+
+<Caption>
+  Personal Template
+</Caption>
+
+## Tables
+
+```
+<Table
+  data={{
+    headers: ["Title", "Description"],
+    rows: [
+      [
+        "First item",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perspiciatis repellat amet quos.",
+      ],
+      [
+        "Second item",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perspiciatis repellat amet quos.",
+      ],
+    ],
+  }}
+/>
+```
+
+Renders:
+
+<Table
+  data={{
+    headers: ["Title", "Description"],
+    rows: [
+      [
+        "First item",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perspiciatis repellat amet quos.",
+      ],
+      [
+        "Second item",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perspiciatis repellat amet quos.",
+      ],
+    ],
+  }}
+/>
+
+## Math Expressions
+
+render mathematical expressions in MDX posts using [KaTeX](https://katex.org/) . Simply wrap your expression in **$** to include KaTeX within your MDX content.
+
+```
+$
+\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+$
+
+$
+\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_i - \mu)^2}
+$
+```
+
+Renders:
+
+$
+\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+$
+
+$
+\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_i - \mu)^2}
+$
+
+## Callout
+
+```
+<Callout emoji="💡">
+Don't push production on Friday
+</Callout>
+```
+
+Renders:
+
+<Callout emoji="💡">
+  Don't push production on Friday
+</Callout>
+
